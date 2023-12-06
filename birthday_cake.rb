@@ -49,21 +49,22 @@ class BirthdayCake
     "Birthday cake with #{self.age} #{candles_status} candles"
   end
 
-  def BirthdayCake.celebrate(age)
-    birthday_cake = Birthdaycake.new(age)
+  def celebrate(age)
+    birthday_cake = BirthdayCake.new(age)
     puts birthday_cake.greet
     puts birthday_cake.to_s
     puts "Lighting candles..."
-    birthday_cake.light_candles
+    birthday_cake.lit = true
     puts birthday_cake.to_s
     puts "Singing happy birthday..."
-    puts birthday_cake.sign
+    puts birthday_cake.sing
     puts "Blowing out candles..."
-    birth_cake.blow_out_candles
+    birthday_cake.lit = false
     puts birthday_cake.to_s
 
     birthday_cake
   end
 end
 
-BirthdayCake.celebrate(10)
+birthday = BirthdayCake.new(10)
+birthday.celebrate(10)
